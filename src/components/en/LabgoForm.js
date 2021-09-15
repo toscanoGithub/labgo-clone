@@ -180,7 +180,7 @@ function LabgoForm() {
         try {
           console.log("------ form data >>>>", values);
           setLoading(true);
-          await fetch("http://localhost:5000/requests", {
+          await fetch("https://labgo-clone.herokuapp.com/requests", {
             mode: "cors",
             method: "POST",
             headers: {
