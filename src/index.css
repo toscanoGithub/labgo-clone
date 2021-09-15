@@ -1,3 +1,8 @@
+* {
+  margin: 0; box-sizing: border-box;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +16,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.alice-carousel__play-btn-wrapper {
+  background-color: transparent !important;
+}
+
+.alice-carousel__play-btn {
+  top: 10px !important; left: 10px !important;
+}
+.alice-carousel__play-btn-item.__pause,
+.alice-carousel__play-btn-item {
+  top: 0;
+  left: 0;
+}
+
+
+
+.alice-carousel__play-btn-item::before,
+.alice-carousel__play-btn-item::after {
+  border-left-color: #FF7748 !important;
+}
+
+.alice-carousel__dots-item:not(.__custom) {
+  background-color: #fff !important;
+}
+
+.alice-carousel__dots-item:not(.__custom):hover,
+.alice-carousel__dots-item:not(.__custom).__active {
+  background-color: #FF7748 !important;
+}
+
+
+.MuiAccordion-root:before {
+  display: none;
+}
+
+
