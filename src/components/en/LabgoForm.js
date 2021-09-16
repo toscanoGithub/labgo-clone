@@ -154,9 +154,7 @@ function LabgoForm() {
     lastName: Yup.string().required("The last name is required"),
 
     firstName: Yup.string().required("The first name is required"),
-    email: Yup.string()
-      .email("Email is invalid")
-      .required("Email is required"),
+    email: Yup.string().email("Email is invalid").required("Email is required"),
     phone: Yup.string().required("The phone number is required"),
     meetingDate: Yup.string().required("Please choose an option"),
     whereHeardAbout: Yup.string().required("Please choose an option"),
@@ -181,7 +179,7 @@ function LabgoForm() {
           console.log("------ form data >>>>", values);
           setLoading(true);
           // https://labgo-clone.herokuapp.com/requests
-          await fetch("http://localhost:5000/requests", {
+          await fetch("https://labgo-clone.herokuapp.com/requests", {
             mode: "cors",
             method: "POST",
             headers: {
