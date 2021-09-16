@@ -47,6 +47,9 @@ function App() {
             <Route exact path="/main">
               {whichMain}
             </Route>
+            <Route exact path="/requests">
+              {whichHome}
+            </Route>
             <Route exact path="/">
               {whichHome}
             </Route>
