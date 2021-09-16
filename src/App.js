@@ -19,7 +19,6 @@ export const AppContext = createContext(null);
 
 function App() {
   const classes = useStyles();
-  const history = useHistory();
   const [selectedLanguage, setSelectedLanguage] = useState("en");
 
   const whichHome = () => {
@@ -27,6 +26,7 @@ function App() {
       return <Home />;
     }
 
+    // eslint-disable-next-line react/jsx-pascal-case
     return <Home_FR />;
   };
 
@@ -34,6 +34,7 @@ function App() {
     if (selectedLanguage === "en") {
       return <Main />;
     } else {
+      // eslint-disable-next-line react/jsx-pascal-case
       return <Main_FR />;
     }
   };
@@ -43,8 +44,12 @@ function App() {
       <AppContext.Provider value={{ selectedLanguage, setSelectedLanguage }}>
         <div className={classes.root}>
           <Switch>
-            <Route path="/main">{whichMain}</Route>
-            <Route path="/">{whichHome}</Route>
+            <Route exact path="/main">
+              {whichMain}
+            </Route>
+            <Route exact path="/">
+              {whichHome}
+            </Route>
           </Switch>
         </div>
       </AppContext.Provider>
