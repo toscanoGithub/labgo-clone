@@ -19,11 +19,13 @@ import * as Yup from "yup";
 import TextInput from "../shared/TextInput";
 import ScaleLoader from "react-spinners/ScaleLoader";
 import { useEffect, useState } from "react";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import CheckboxWrapper from "../shared/FormsUI/Checkbox";
 import ButtonWrapper from "../shared/FormsUI/Button";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { BiDownArrowCircle } from "react-icons/bi";
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -257,7 +259,7 @@ function LabgoForm() {
 
                 <Accordion elevation={0} className={classes.accordion}>
                   <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
+                    expandIcon={<BiDownArrowCircle />}
                     aria-label="Expand"
                     aria-controls="additional-actions1-content"
                     id="additional-actions1-header"
@@ -314,7 +316,7 @@ function LabgoForm() {
                 <Accordion elevation={0} className={classes.accordion}>
                   <AccordionSummary
                     className={classes.accordionSummary}
-                    expandIcon={<ExpandMoreIcon />}
+                    expandIcon={<BiDownArrowCircle />}
                     aria-label="Expand"
                     aria-controls="additional-actions1-content"
                     id="additional-actions1-header"
