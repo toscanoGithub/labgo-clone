@@ -4,6 +4,9 @@ import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../App";
 
+import logoBb from "../shared/images/logo_bois-de-boulogne.png";
+import logoGg from "../shared/images/logo_gg.png";
+import logAbbot from "../shared/images/logo_john-abbott.png";
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "#fff",
@@ -248,17 +251,11 @@ function Footer() {
         </div>
         <div className={classes.links}>
           <a target="_blank" href="https://www.bdeb.qc.ca/" rel="noreferrer">
-            <img
-              src="http://labgo.ca/wp-content/uploads/2021/07/logo_bois-de-boulogne-e1626215662735.png"
-              alt=""
-            />
+            <img src={logoBb} alt="" />
           </a>
 
           <a target="_blank" href="https://www.cgodin.qc.ca//" rel="noreferrer">
-            <img
-              src="http://labgo.ca/wp-content/uploads/2021/07/logo_gg-e1626215654739.png"
-              alt=""
-            />
+            <img src={logoGg} alt="" />
           </a>
 
           <a
@@ -266,10 +263,7 @@ function Footer() {
             href="https://www.johnabbott.qc.ca/"
             rel="noreferrer"
           >
-            <img
-              src="http://labgo.ca/wp-content/uploads/2021/07/logo_john-abbott-e1626215533189.png"
-              alt=""
-            />
+            <img src={logAbbot} alt="" />
           </a>
         </div>
       </div>

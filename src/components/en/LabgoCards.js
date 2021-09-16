@@ -6,13 +6,13 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Typography from "@material-ui/core/Typography";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Profile from "./accordionDetails/Profile";
 import Admission from "./accordionDetails/Admission";
 import LearningSkills from "./accordionDetails/LearningSkils";
 import { Divider } from "@material-ui/core";
 import Footer from "./Footer";
 import InfoSession from "./accordionDetails/InfoSession";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const useStyles = makeStyles({
   root: {
@@ -43,8 +43,8 @@ const useStyles = makeStyles({
   },
 
   accordionSummary: {
-    padding: "30px 0 50px 10px ",
-    // padding: "auto auto 40px auto",
+    padding: "30px 10px 50px 10px ",
+    
   },
 });
 
@@ -59,12 +59,14 @@ export default function LabgoCards() {
       >
         <AccordionSummary
           className={classes.accordionSummary}
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<FiArrowUpRight />}
           aria-label="Expand"
           aria-controls="additional-actions1-content"
           id="additional-actions1-header"
         >
-          <Typography>1&nbsp;&nbsp;&nbsp;THE RIGHT PROFILE</Typography>
+          <Typography variant="4">
+            1&nbsp;&nbsp;&nbsp;THE RIGHT PROFILE
+          </Typography>
         </AccordionSummary>
         <AccordionDetails className={classes.detail}>
           <Profile />
@@ -80,12 +82,12 @@ export default function LabgoCards() {
       >
         <AccordionSummary
           className={classes.accordionSummary}
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<FiArrowUpRight />}
           aria-label="Expand"
           aria-controls="additional-actions2-content"
           id="additional-actions2-header"
         >
-          <Typography>
+          <Typography variant="4">
             2&nbsp;&nbsp;&nbsp;RECOGNITION OF PRIOR LEARNING AND SKILLS
           </Typography>
         </AccordionSummary>
@@ -104,12 +106,14 @@ export default function LabgoCards() {
       >
         <AccordionSummary
           className={classes.accordionSummary}
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<FiArrowUpRight />}
           aria-label="Expand"
           aria-controls="additional-actions3-content"
           id="additional-actions3-header"
         >
-          <Typography>3&nbsp;&nbsp;&nbsp;CONDITION OF ADMISSIONS</Typography>
+          <Typography variant="4">
+            3&nbsp;&nbsp;&nbsp;CONDITION OF ADMISSIONS
+          </Typography>
         </AccordionSummary>
         <AccordionDetails className={classes.detail}>
           <Admission />
@@ -127,12 +131,14 @@ export default function LabgoCards() {
       >
         <AccordionSummary
           className={classes.accordionSummary}
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<FiArrowUpRight />}
           aria-label="Expand"
           aria-controls="additional-actions2-content"
           id="additional-actions2-header"
         >
-          <Typography>4&nbsp;&nbsp;&nbsp;INFORMATION SESSION</Typography>
+          <Typography variant="4">
+            4&nbsp;&nbsp;&nbsp;INFORMATION SESSION
+          </Typography>
         </AccordionSummary>
         <AccordionDetails className={classes.detail}>
           <InfoSession />
